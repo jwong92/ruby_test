@@ -90,7 +90,6 @@ test:
     * `rake db:migrate`
 
 
-
 ## References
 [1](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
 [2](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres)
