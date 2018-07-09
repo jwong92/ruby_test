@@ -4,7 +4,7 @@
 1. Create a new project with `rails new blog`
     * This creates a Rails application and installs gem dependencies already mentioned in Gemfile using `bundle install`
 2. Blog directory has a number of auto-generated files and folders that make up the rails application.
-|File/Folder|Purpose|
+|File/Folder|Purpose
 |-----------|-------|
 |app/|Contains controllers, models, views, helpers, mailers, assets etc...|
 |bin/|Contains rails script that starts the application and contains other scripts used to setup, update, deploy or run the application|
@@ -398,7 +398,7 @@ end
 ## Adding a Second Model
 1. Create a comment model that references one article. In terminal, run command `bin/rails generate model Comment commenter:string body:text article:references`
 2. This generates four files
-|File|Purpose|
+|File|Purpose
 |----|-------|
 |db/migrate/xxxxxx_create_comments.rb|Migration to create the comments table in the database|
 |app/models/comment.rb|The comment model|
@@ -428,7 +428,7 @@ end
 ## Generating a Controller
 1. Create a matching controller with the command `bin/rails generate controller Comments`
 2. This creates 5 files and one empty directory
-|File/Directory|Purpose|
+|File/Directory|Purpose
 |--------------|-------|
 |app/controllers/comments_controller.rb|The comments controller|
 |app/views/comments/|Views of the controller stored here|
