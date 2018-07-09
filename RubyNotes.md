@@ -4,8 +4,9 @@
 1. Create a new project with `rails new blog`
     * This creates a Rails application and installs gem dependencies already mentioned in Gemfile using `bundle install`
 2. Blog directory has a number of auto-generated files and folders that make up the rails application.
-|File/Folder|Purpose
-|-----------|-------|
+
+|File/Folder|Purpose|
+|---|---|
 |app/|Contains controllers, models, views, helpers, mailers, assets etc...|
 |bin/|Contains rails script that starts the application and contains other scripts used to setup, update, deploy or run the application|
 |config/|Configures application routes, database etc...|
@@ -398,12 +399,14 @@ end
 ## Adding a Second Model
 1. Create a comment model that references one article. In terminal, run command `bin/rails generate model Comment commenter:string body:text article:references`
 2. This generates four files
+
 |File|Purpose
 |----|-------|
 |db/migrate/xxxxxx_create_comments.rb|Migration to create the comments table in the database|
 |app/models/comment.rb|The comment model|
 |test/models/comment_test.rb|Testing harness for the comment model|
 |test/fixtures/comments.yml|Sample comments for use in testing|
+
 3. In the `app/models/comment.rb`, the line __belongs_to :article__ sets an Active Record association.
     * The __(:refereces)__ keyword is a special data type for models by creating a new column in the database table with the provided model name appended with an _id that can hold integer values.
     * rails also makes a migration to create corresponding database table that includes t.references that creates an integer column called __article_id__, an index, and foreign key constraint that points to the id column in the articles table.
@@ -428,7 +431,8 @@ end
 ## Generating a Controller
 1. Create a matching controller with the command `bin/rails generate controller Comments`
 2. This creates 5 files and one empty directory
-|File/Directory|Purpose
+
+|File/Directory|Purpose|
 |--------------|-------|
 |app/controllers/comments_controller.rb|The comments controller|
 |app/views/comments/|Views of the controller stored here|
@@ -436,6 +440,7 @@ end
 |app/helpers/comments_helper.rb|A view helper file|
 |app/assets/javascripts/comments.coffee|CoffeeScript for the controller|
 |app/assets/stylesheets/comments.scss|CSS for controller|
+
 3. Alter show.html.erb to allow users to write a comment
 ```
 <h2>Add a comment:</h2>

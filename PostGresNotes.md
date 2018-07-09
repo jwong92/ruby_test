@@ -24,8 +24,9 @@
     * This creates a user without any permissions. To add permissions, do:
         * `ALTER ROLE username PERMISSION`
 4. __createuser__ - instead of logging into psql to execute SQL queries, use a command line interface to do the sme task
-|Keyword|Task
-|-------|----|
+
+|Keyword|Task|
+|-------|-----------------|
 |createuser|creates a user|
 |createdb|creates a database|
 |dropuser|deletes a user|
@@ -34,6 +35,7 @@
 |pg_dump|dumps contents of a single database to a file|
 |pg_dumpall|dumps all databases to a file|
 |psql|keyword to execute psql|
+
 * Create a user `createuser username`
 
 ## Create new rails API with PostgreSQL database
@@ -91,5 +93,5 @@ test:
 
 
 ## References
-[1]("Getting Started with Postgres", https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
-[2]("Setting up ROR with Postgres", https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres)
+[1](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
+[2](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres)
