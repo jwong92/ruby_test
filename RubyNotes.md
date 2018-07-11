@@ -2,8 +2,10 @@
 
 ## Creating the Application
 1. Create a new project with `rails new blog`
-    * This creates a Rails application and installs gem dependencies already mentioned in Gemfile using `bundle install`
-2. Blog directory has a number of auto-generated files and folders that make up the rails application.
+    * This creates a Rails application and installs gem dependencies already mentioned in Gemfile.
+2. Run `bundle install`
+    * DO NOT SKIP THIS STEP!
+3. Blog directory has a number of auto-generated files and folders that make up the rails application.
 
 |File/Folder|Purpose|
 |---|---|
@@ -39,6 +41,7 @@
 9. View templates are written in eRuby (embedded ruby) processed by request cycle in Rails before being sent to the user
 10. To create a new controller called "welcome" with an action called "index" run:
     * `bin/rails generate controller Welcome index`
+    * To also generate a view with the controller, use `rails g controller ControllerName index show` which will generate two different controllers and their associated views
     * Rails will create several files and routes
 
 ## Setting Applications Home Page
@@ -145,6 +148,9 @@ end
     * `bin/rails generate model Article title:string text:text`
     * Tells Rails we want an Article model with a title attribute of type string and text attribute of type text.
     * Those attributes are auto added to the articles table in the database and mapped to the Article model
+2. To rollback the creation of a model
+    * `bundle exec rake db:rollback`
+    * `rails destroy model <model_name>`
 
 ## Running Migrations
 1. `bin/rails generate model` creates a database migration file inside the db/migrate directory.
@@ -566,3 +572,6 @@ http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
         * Data types include: __string__, __text__, __references__
 * To add a controller:
     1. `bin/rails generate controller (name_of_controller)`
+* An equivalent to var_dump in Ruby is 
+    * `<%= theobject.inspect %>`
+    * Use `<%= theobject.methods.inspect %>` to see some methods that can be called on this object

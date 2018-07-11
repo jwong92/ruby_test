@@ -41,6 +41,9 @@
 ## Create new rails API with PostgreSQL database
 * `rails new super-awesome-api --api --database=postgresql`
 
+## Reset DB migrations from existing database to a new project
+* `rake db:migrate:reset`
+
 ## Creating a Database
 1. There are two ways
     * Executing SQL commands with psql
